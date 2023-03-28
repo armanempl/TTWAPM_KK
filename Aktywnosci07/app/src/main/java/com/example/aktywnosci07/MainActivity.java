@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mapa2 (View view) {
-        String code = "geo:saddr=9.938083,-84.054430&"+" daddr=9.926392,-84.055964";
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(code));
-        startActivity(intent);
+        String code = "saddr=9.938083,-84.054430&daddr=9.926392,-84.055964";
+        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(code));
+        startActivity(intent2);
 
     }
 

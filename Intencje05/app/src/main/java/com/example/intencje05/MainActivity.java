@@ -1,4 +1,4 @@
-package com.example.intencje02;
+package com.example.intencje05;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,10 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void onClick(View view){
-        Intent i = new Intent(this, DrugaAktywnosc.class);
-        i.putExtra("Imie", "Adam");
-        i.putExtra("Wiek", 18);
-        startActivity(i);
+    public void onClick (View view){
+        startActivity(new Intent("com.example.xx.intencje05.AKCJA2"));
     }
 }

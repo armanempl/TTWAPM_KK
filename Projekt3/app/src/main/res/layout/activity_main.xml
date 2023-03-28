@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="209dp"
+        android:layout_height="181dp"
+        android:src="@drawable/stanyprzycisku"
+        tools:ignore="SpeakableTextPresentCheck"> <!-- Wskazanie na plik XML -->
+    </ImageButton>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Przycisk"
+        android:id="@+id/button"
+        android:background="@drawable/kolorowyprzycisk" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/StylPrzycisku"
+        android:layout_width="match_parent"
+        android:layout_height="261dp"
+        android:background="@drawable/gradient"
+        android:text="OK" />
+
+
+</LinearLayout>

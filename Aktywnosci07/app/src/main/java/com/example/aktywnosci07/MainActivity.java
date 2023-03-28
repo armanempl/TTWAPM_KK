@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mapa2 (View view) {
-        String code = "saddr=9.938083,-84.054430&daddr=9.926392,-84.055964";
-        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(code));
+        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(
+                "google.navigation:q=" +"9.938083,-84.054430&"));
         startActivity(intent2);
 
     }

@@ -36,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void mapa4 (View view){
+        String thePlace = "Cleveland State University,Ohio";
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("geo:0,0?q=(" + thePlace +")"));
+        startActivity(intent);
+
+    }
     public void musicplayer (View view) {
         Intent myActivity2 = new Intent("android.intent.action.MUSIC_PLAYER");
         startActivity(myActivity2);

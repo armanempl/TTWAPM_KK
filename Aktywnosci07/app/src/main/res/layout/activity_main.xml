@@ -7,13 +7,20 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="357dp"
-        android:layout_height="401dp"
+        android:layout_width="358dp"
+        android:layout_height="523dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="mapa4"
+            android:text="Mapa przykład" />
 
         <Button
             android:id="@+id/button"

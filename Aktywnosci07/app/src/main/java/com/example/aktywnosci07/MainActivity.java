@@ -22,10 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mapa2 (View view) {
-        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(
-                "google.navigation:q=" +"9.938083,-84.054430&"));
-        startActivity(intent2);
-
+        Intent intent = new Intent( android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?"+
+                "saddr=9.938083,-84.054430&" + "daddr=9.926392,-84.055964"));
+        startActivity(intent);
     }
 
     public void mapa3 (View view) {

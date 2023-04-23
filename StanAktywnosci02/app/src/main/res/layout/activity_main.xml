@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Przycisk wciśnięto 0 razy"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClicked"
+        android:text="Naciśnij mnie" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Przycisk wciśnięto 0 razy" />
+
+
+</LinearLayout>

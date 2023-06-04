@@ -1,4 +1,4 @@
-package com.example.sqlite01;
+package com.example.sqlite02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,18 +29,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         // Dodawanie użytkownika Jan Kowalski do tabeli STUDENCI
-        String sqlStudent = "INSERT INTO STUDENCI VALUES (?, ?, ?)";
+        String sqlStudent = "INSERT INTO STUDENCI VALUES (?, ?, ?), (?,?,?), (?,?,?)";
         SQLiteStatement statement = db.compileStatement(sqlStudent);
 
         // Ustawianie wartości dla parametrów zapytania parametrycznego
         statement.bindLong(1, 1);
-        statement.bindString(2, "Adam");
+        statement.bindString(2, "Paweł");
         statement.bindString(3, "Pierwszy");
+
+        statement.bindLong(4, 2);
+        statement.bindString(5, "Adam");
+        statement.bindString(6, "Drugi");
+
+        statement.bindLong(7, 3);
+        statement.bindString(8, "Kamil");
+        statement.bindString(9, "Trzeci");
+
         statement.executeInsert();
 
         // Pobieranie wszystkich wierszy z tabeli Studenci
         ArrayList<String> wyniki = new ArrayList<>();
-        Cursor c = db.rawQuery("SELECT `Id`, `Imie`, `Nazwisko` FROM STUDENCI", null);
+        Cursor c = db.rawQuery("SELECT DISTINCT `Id`, `Imie`, `Nazwisko` FROM STUDENCI WHERE `Id` == 3", null);
 
         // Sprawdzanie, czy tabela ma rekordy
         if (c.moveToFirst()) {
@@ -50,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 @SuppressLint("Range") String nazwisko = c.getString(c.getColumnIndex("Nazwisko"));
 
                 // Dodawanie wartości do listy wyników
-                wyniki.add("Id: " + id + ", Imię: " + imie + ", Nazwisko: " + nazwisko);
+                wyniki.add("Wypisanie danych o id 3: \n Id: " + id + ", Imię: " + imie + ", Nazwisko: " + nazwisko);
             } while (c.moveToNext());
         }
 
@@ -59,8 +68,34 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, wyniki);
         listView.setAdapter(adapter);
 
+
         // Zamknięcie kursora
         c.close();
+
     }
 
-}
+    public void onClick2(View view) {
+        // Drugie zapytanie
+        // Pobieranie wszystkich wierszy z tabeli Studenci
+        ArrayList<String> wyniki2 = new ArrayList<>();
+        Cursor c2 = db.rawQuery("SELECT DISTINCT `Id`, `Imie`, `Nazwisko` FROM STUDENCI ORDER BY `Id` DESC", null);
+
+        // Sprawdzanie, czy tabela ma rekordy
+        if (c2.moveToFirst()) {
+            do {
+                @SuppressLint("Range") int id = c2.getInt(c2.getColumnIndex("Id"));
+                @SuppressLint("Range") String imie = c2.getString(c2.getColumnIndex("Imie"));
+                @SuppressLint("Range") String nazwisko = c2.getString(c2.getColumnIndex("Nazwisko"));
+
+                // Dodawanie wartości do listy wyników
+                wyniki2.add("Id: " + id + ", Imię: " + imie + ", Nazwisko: " + nazwisko);
+            } while (c2.moveToNext());
+        }
+
+        // Ustawienie adaptera dla kontrolki ListView
+        ListView listView2 = findViewById(R.id.listView2);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, wyniki2);
+        listView2.setAdapter(adapter2);
+        c2.close();
+    }
+    }

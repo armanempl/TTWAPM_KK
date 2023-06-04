@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttons" parent="Widget.AppCompat.Button">
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/arimo</item>
+    </style>
+</resources>

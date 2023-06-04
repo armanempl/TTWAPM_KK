@@ -9,9 +9,10 @@
         android:text="Wyświetl zawartość bazy danych"
         android:id="@+id/button"
         android:onClick="onClick"/>
+
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="237dp"
         android:layout_weight="1" />
 </LinearLayout>

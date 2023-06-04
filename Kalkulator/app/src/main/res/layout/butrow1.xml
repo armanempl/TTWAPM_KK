@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="314dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button51"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="Num" />
+
+            <Button
+                android:id="@+id/button52"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/button53"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="*" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button54"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button55"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button56"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button57"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button58"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button59"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button60"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button61"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button62"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button63"
+                style="@style/buttons"
+                android:layout_width="171dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button64"
+                style="@style/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

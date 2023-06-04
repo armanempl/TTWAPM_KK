@@ -22,11 +22,13 @@
         </activity>
         <activity
             android:name=".History"
+            android:label=".History"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+            <intent-filter> <!-- Filtr intencji -->
+                <action
+                    android:name="com.example.xx.kalkulator.HISTORY" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

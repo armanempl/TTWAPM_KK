@@ -101,12 +101,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void history(View view) {
         ImageButton cleanbut = (ImageButton)findViewById(R.id.imageButton2);
-        Intent intent = new Intent(MainActivity.this, History.class);
-        // Przekazywanie listy jako dodatkowych danych
+        Intent intent = new Intent("com.example.xx.kalkulator.HISTORY");
         intent.putStringArrayListExtra("lista", (ArrayList<String>) lista);
         Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim1);
         cleanbut.startAnimation(animation);
-        // Uruchamianie ActivityB
         startActivity(intent);
     }
     public void onClickCalc(View view) {
@@ -123,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
             double number = Double.parseDouble(numbers[i]);
             String operator = operators[i];
 
-            if (operator.equals("#")) {
+            if (operator.equals("^")) {
                 result = Math.pow(result, number);
             } else {
                 switch (operator) {
@@ -148,45 +146,5 @@ public class MainActivity extends AppCompatActivity {
         flaga = true;
 
     }
-
-    private static double calculateExpression(String expression) {
-                String[] tokens = expression.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)");
-
-                Stack<Double> stack = new Stack<>();
-
-                for (String token : tokens) {
-                    if (isNumeric(token)) {
-                        stack.push(Double.parseDouble(token));
-                    } else {
-                        double operand2 = stack.pop();
-                        double operand1 = stack.pop();
-                        double value = performOperation(token, operand1, operand2);
-                        stack.push(value);
-                    }
-                }
-
-                return stack.pop();
-            }
-
-            private static boolean isNumeric(String str) {
-                return str.matches("-?\\d+(\\.\\d+)?");
-            }
-
-            private static double performOperation(String operator, double operand1, double operand2) {
-                switch (operator) {
-                    case "+":
-                        return operand1 + operand2;
-                    case "-":
-                        return operand1 - operand2;
-                    case "*":
-                        return operand1 * operand2;
-                    case "/":
-                        return operand1 / operand2;
-                    case "**":
-                        return pow(operand1,operand2);
-                    default:
-                        throw new IllegalArgumentException("Nieznany operator: " + operator);
-                }
-            }
         }
 
